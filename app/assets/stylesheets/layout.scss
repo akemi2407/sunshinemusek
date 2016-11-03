@@ -1,7 +1,24 @@
 body {
-	background-color: #EA8BB3;
-	background-image: url('https://lh4.googleusercontent.com/ZXy5GOoObI3HrOIo3stPGZF8gG25pdVzlzyBqzdJYJHsflGrYqxvVnmCDvtNipBDpxlaMW0APDkZmEI=w2522-h1472');
-	padding: 5px;
+	background-color: $standardpink;
+	background-image: url('https://drive.google.com/uc?id=0B_DzI16TvTR2V2M4cFR2VktrMWM');
 	margin: 0;
+	height: 100vh;
 }
 
+.middle-content {
+	display: table;
+	width: 100%;
+	height: 100%;
+
+	.content { display: table-cell; }
+	.left-sidebar { display: table-cell; }
+	.right-sidebar { display: table-cell; }
+}
+
+.content {
+	background-color: $whitepink;
+	width: 60%;
+	min-width: 300px;
+	max-width: 800px;
+	padding: 10px;
+}
