@@ -26,33 +26,77 @@ body {
 .header-container {
 	width: 100%;
 	height: 200px;
-	background-color: $darkpink;
+	background-color: #fff;
+	border-bottom: 3px dashed $darkpink;
 }
 
 .header {
 	margin: 0 auto;
-	width: 800px;
+	height: 100%;
 	display: table;
 
+	@media (max-width: 630px) {
+	  .header__logo {
+	    display: none;
+	  }
+	}
+
+	@media (min-width: 630px) {
+	  .header__logo {
+	    display: table-cell;
+	  }
+	}
+
 	.header__logo {
-		height: 180px;
-		width: 180px;
+		width: 25%;
+
+		.header__logo__icon {
+			height: 180px;
+			width: 180px;
+			margin: 10px;
+			float: right;
+			background-color: white;			
+		}
+	}
+
+	.header__text {
+		display: table-cell;
+		width: 75%;
 		margin: 10px;
-		background-color: white;
-		float: left;
+		padding: 10px;
+		vertical-align: middle;
+		
+		@media (max-width: 430px) {
+		  .header__text__name {
+		    font-size: 3.1em;
+		  }
+		  .header__text__subtext {
+			font-size: 1.4em;
+		  }
+		}
+
+		@media (min-width: 430px) {
+		  .header__text__name {
+			font-size: 4em;
+		  }
+		  .header__text__subtext {
+			font-size: 2em;	  	
+		  }
+		}
+
+		.header__text__name {
+			color: $hotpink;
+			border-bottom: 3px solid $hotpink;
+			margin-bottom: 5px;
+			font-weight: bold;
+		}
+
+		.header__text__subtext {
+			color: $standardpink;
+			text-align: right;
+			font-style: italic;
+		}
 	}
 
-	.header__name {
-		-webkit-text-stroke: 1px white;
-		color: $hotpink;
-		font-weight: bold;
-		font-size: 5em;
-	}
-
-	.header__subtext {
-		color: $whitepink;
-		font-size: 2em;
-		font-weight: bold;
-	}
 }
 
