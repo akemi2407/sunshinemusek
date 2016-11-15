@@ -1,6 +1,6 @@
 body {
 	background-color: $standardpink;
-	background-image: url('https://drive.google.com/uc?id=0B_DzI16TvTR2V2M4cFR2VktrMWM');
+	background-image: url('bg.png');
 	margin: 0;
 	height: 100vh;
 }
@@ -8,7 +8,7 @@ body {
 .middle-content {
 	display: table;
 	width: 100%;
-	min-height: calc(100% - 200px);
+	min-height: calc(100% - 150px);
 
 	.content { display: table-cell; }
 	.left-sidebar { display: table-cell; }
@@ -20,32 +20,32 @@ body {
 	border-left: 2px solid $darkpink;
 	border-right: 2px solid $darkpink;
 	width: 60%;
-	min-width: 300px;
+	min-width: 270px;
 	max-width: 800px;
 	padding: 0 20px;
-	padding-top: 100px;
+	padding-top: 50px;
 }
 
 .header-container {
 	width: 100%;
-	height: 200px;
+	height: 150px;
 	background-color: #fff;
 	display: inline-block;
-	-moz-box-shadow:0px 70px 80px rgba(0,0,0,0.4);
-	-webkit-box-shadow:0px 70px 80px rgba(0,0,0,0.4);
-	box-shadow:0px 70px 80px rgba(0,0,0,0.4);
+	-moz-box-shadow:0px 20px 100px rgba(5,0,0,0.4);
+	-webkit-box-shadow:0px 20px 100px rgba(5,0,0,0.4);
+	box-shadow:0px 20px 100px rgba(5 ,0,0,0.4);
 }
 
 .header-container::after {
-	height: 80px;
+	height: 40px;
 	width: 100%;
 	content: '';
 	display: block;
 	position: absolute;
-	top: 195px;
+	top: 145px;
 	z-index: 3;
 	border-top: 3px dashed $darkpink;
-	background: url('https://drive.google.com/uc?id=0B_DzI16TvTR2Z0c1akwza0FOU0E');
+	background: url('lace.png');
 }
 
 .header {
@@ -66,11 +66,9 @@ body {
 	}
 
 	.header__logo {
-		width: 25%;
-
 		.header__logo__icon {
-			height: 180px;
-			width: 180px;
+			height: 120px;
+			width: 120px;
 			margin: 10px;
 			float: right;
 			background-color: white;			
@@ -83,23 +81,12 @@ body {
 		margin: 10px;
 		padding: 10px;
 		vertical-align: middle;
-		
-		@media (max-width: 430px) {
-		  .header__text__name {
-		    font-size: 3.1em;
-		  }
-		  .header__text__subtext {
-			font-size: 1.4em;
-		  }
-		}
 
-		@media (min-width: 430px) {
-		  .header__text__name {
-			font-size: 4em;
-		  }
-		  .header__text__subtext {
-			font-size: 2em;	  	
-		  }
+		.header__text__name {
+			font-size: 3.1em;
+		}
+		.header__text__subtext {
+			font-size: 1.4em;	  	
 		}
 
 		.header__text__name {
