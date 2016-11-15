@@ -37,6 +37,16 @@ body {
 }
 
 .header-container::after {
+	height: 324px;
+	width: 100%;
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -1;
+	background: url('cloud.png');
+}
+
+.header-container::before {
 	height: 40px;
 	width: 100%;
 	content: '';
