@@ -1,6 +1,6 @@
 body {
 	background-color: $standardpink;
-	background-image: url('bg.png');
+	background-image: asset-url('bg.png');
 	margin: 0;
 	height: 100vh;
 }
@@ -43,7 +43,7 @@ body {
 	display: block;
 	position: absolute;
 	z-index: -1;
-	background: url('cloud.png');
+	background: asset-url('cloud.png');
 }
 
 .header-container::before {
@@ -55,7 +55,7 @@ body {
 	top: 145px;
 	z-index: 3;
 	border-top: 3px dashed $darkpink;
-	background: url('lace.png');
+	background: asset-url('lace.png');
 }
 
 .header {
