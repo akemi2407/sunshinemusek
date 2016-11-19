@@ -1,0 +1,9 @@
+.header-container::after {
+	height: 324px;
+	width: 100%;
+	content: '';
+	display: block;
+	position: absolute;
+	z-index: -1;
+	background: asset-url('cloud.png');
+}

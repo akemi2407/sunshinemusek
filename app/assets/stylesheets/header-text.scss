@@ -1,0 +1,30 @@
+
+.header__text {
+	display: table-cell;
+	padding: 0px 5px;
+	width: 77%;
+	vertical-align: middle;
+
+	@media (max-width: 340px) {
+		.header__text__name { font-size: 2.7em; }
+		.header__text__subtext { font-size: 1.2em;	}
+	}
+
+	@media (min-width: 340px) {
+		.header__text__name { font-size: 3em; }
+		.header__text__subtext { font-size: 1.4em; }
+	}
+
+	.header__text__name {
+		color: $hotpink;
+		border-bottom: 3px solid $hotpink;
+		margin-bottom: 5px;
+		font-weight: bold;
+	}
+
+	.header__text__subtext {
+		color: $standardpink;
+		text-align: right;
+		font-style: italic;
+	}
+}
