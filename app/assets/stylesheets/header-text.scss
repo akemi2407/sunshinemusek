@@ -6,23 +6,23 @@
 	vertical-align: middle;
 
 	@media (max-width: 340px) {
-		.header__text__name { font-size: 2.7em; }
-		.header__text__subtext { font-size: 1.2em;	}
+		&__name { font-size: 2.7em; }
+		&__subtext { font-size: 1.2em;	}
 	}
 
 	@media (min-width: 340px) {
-		.header__text__name { font-size: 3em; }
-		.header__text__subtext { font-size: 1.4em; }
+		&__name { font-size: 3em; }
+		&__subtext { font-size: 1.4em; }
 	}
 
-	.header__text__name {
+	&__name {
 		color: $hotpink;
 		border-bottom: 3px solid $hotpink;
 		margin-bottom: 5px;
 		font-weight: bold;
 	}
 
-	.header__text__subtext {
+	&__subtext {
 		color: $standardpink;
 		text-align: right;
 		font-style: italic;

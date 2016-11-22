@@ -1,0 +1,71 @@
+@media (max-width: 670px) {
+	.nav-bar { display: none; }
+	.nav-bar-mobile { display: inline-block; }
+}
+
+@media (min-width: 670px) {
+	.nav-bar-mobile { display: none; }
+	.nav-bar { display: inline-block; }
+}
+
+@mixin basic-nav-bar {
+	height: 30px;
+	width: 100%;
+	overflow: hidden;
+	background-color: $hotpink;
+
+	-moz-box-shadow-bottom:0px 30px 60px rgba(110,0,80,0.8);
+	-webkit-box-shadow-bottom:0px 30px 60px rgba(110,0,80,0.8);
+	box-shadow:0px 30px 60px rgba(110,0,80,0.8);
+}
+
+@mixin basic-nav-bar-item($width) {
+	display: inline-block;
+	overflow: hidden;
+	width: $width;
+	height: 30px;
+	line-height: 30px;
+	color: $pastelpink;
+}
+
+@mixin basic-nav-bar-item-clickable {
+	&:hover {
+		cursor: pointer;
+		background-color: $standardpink;
+	}
+
+	&--active {
+		cursor: default;
+		background-color: $hotpink;
+		color: #fff;
+	}
+}
+
+.nav-bar-mobile {
+	@include basic-nav-bar;
+	
+	&__menu {
+		@include basic-nav-bar-item(100px);
+		padding: 0 15px;
+	}	
+
+	&__toggle {
+		@include basic-nav-bar-item(15px);
+		@include basic-nav-bar-item-clickable;
+		float: right;
+		padding: 0 15px;
+	}	
+}
+
+.nav-bar {
+	@include basic-nav-bar;
+	text-align: center;
+}
+
+.nav-bar__link {
+	@include basic-nav-bar-item(13%);	
+	@include basic-nav-bar-item-clickable;
+	text-align: center;
+	padding: 0 2px;
+	text-decoration: none;
+}
